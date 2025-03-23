@@ -55,4 +55,27 @@ yesButton.addEventListener("click", function() {
     `;
 
     document.body.style.overflow = "hidden";
+    const style = document.createElement("style");
+    style.innerHTML = `
+        .yes-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        
+        .yes-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .yes-image {
+            width: 300px; /* 控制图片宽度 */
+            max-width: 80%; /* 避免图片过大 */
+            height: auto; /* 保持图片比例 */
+        }
+    `;
+    document.head.appendChild(style);
 });
